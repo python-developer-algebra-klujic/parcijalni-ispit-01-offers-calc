@@ -111,5 +111,44 @@ def main():
             print("Krivi izbor. Pokusajte ponovno.")
 
 
+
+
+
+
+
+
+
+
+
+from models.product import Product
+from models.offer_item import OfferItem
+
+
+
+def demo():
+    usb_flash = Product(14,
+                        "USB Flash Drive",
+                        "64GB, USB 3.1",
+                        10.00)
+
+    offer_item_1 = OfferItem(1,
+                             15,
+                             usb_flash)
+    print(offer_item_1)
+
+    offer_item_1.set_quantity(20)
+    print(offer_item_1)
+
+
+    offer_item_2 = OfferItem(1,
+                             150,
+                             usb_flash)
+    print(offer_item_2)
+    offer_item_2.set_quantity(250)
+    print(offer_item_2)
+
+
+
 if __name__ == "__main__":
-    main()
+    # main()
+    demo()

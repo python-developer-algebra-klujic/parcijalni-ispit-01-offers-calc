@@ -1,6 +1,6 @@
 from typing import List
-from offer_item import OfferItem
-from customer import Customer
+from models.offer_item import OfferItem
+from models.customer import Customer
 from constants.constants import TAX
 
 
@@ -17,6 +17,7 @@ class Offer:
         self.sub_total = 0.0
         self.tax = 0.0
         self.total = 0.0
+
         self.calculate_price()
         self.generate_offer_number()
 
