@@ -1,4 +1,5 @@
 from models.product import Product
+from constants.constants import CURRENCY
 
 
 class OfferItem:
@@ -20,5 +21,9 @@ class OfferItem:
         self.quantity = new_quantity
         self._calculate_total()
 
+    def set_product(self, new_product):
+        self.product = new_product
+        self._calculate_total()
+
     def __repr__(self):
-        return f'{self.product.name} {self.item_total_price} EUR'
+        return f'{self.product.name} {self.item_total_price} {CURRENCY}'

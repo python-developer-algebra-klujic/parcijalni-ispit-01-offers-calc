@@ -119,10 +119,12 @@ def main():
 
 
 
+from datetime import datetime as dt
 
 from models.product import Product
 from models.offer_item import OfferItem
-
+from models.offer import Offer
+from models.customer import Customer
 
 
 def demo():
@@ -146,6 +148,17 @@ def demo():
     print(offer_item_2)
     offer_item_2.set_quantity(250)
     print(offer_item_2)
+
+    customer = Customer(11, "Urban Innovations", "info@urbaninnovations.com", "89012345678")
+
+    ponuda = Offer(customer)
+    ponuda.add_item(offer_item_1)
+    ponuda.add_item(offer_item_2)
+    print(ponuda)
+
+    new_date = dt(2025, 1, 15)
+    ponuda.set_offer_date(new_date)
+    print(ponuda)
 
 
 

@@ -1,4 +1,4 @@
-
+from constants.constants import CURRENCY
 
 
 class Product:
@@ -13,4 +13,4 @@ class Product:
         self.price = price
 
     def __repr__(self) -> str:
-        return f'Proizvod: {self.name} ({self.price} EUR)'
+        return f'Proizvod: {self.name} ({self.price} {CURRENCY})'
